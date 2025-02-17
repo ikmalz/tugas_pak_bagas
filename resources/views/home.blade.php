@@ -41,36 +41,43 @@
                 <img src="WhatsApp Image 2025-02-17 at 13.12.47_5622caff.jpg" alt="Foto Ikmal" class="w-40 h-40 rounded-full mx-auto shadow-md object-cover">
             </div>
             <div class="mt-6">
-                <p class="text-gray-700"><span class="font-semibold">Nama:</span> Ikmal Fairuz Arabi</p>
-                <p class="text-gray-700"><span class="font-semibold">Kelas:</span> XI PPLG 2</p>
-                <p class="text-gray-700"><span class="font-semibold">Alamat:</span> Jl. Bhakti Abri - Kel Sukamaju Baru, Kec Tapos, Bekasi</p>
-                <p class="text-gray-700"><span class="font-semibold">Tempat, Tanggal Lahir:</span> depok, 04 Juni 2008</p>
-                <p class="text-gray-700"><span class="font-semibold">Agama:</span> Islam</p>
-                <p class="text-gray-700"><span class="font-semibold">Jenis Kelamin:</span> Laki-laki</p>
-                <p class="text-gray-700"><span class="font-semibold">Asal Sekolah:</span> SMK Taruna Bhakti</p>
+                <p class="text-gray-700"><span class="font-semibold">Name:</span> Ikmal Fairuz Arabi</p>
+                <p class="text-gray-700"><span class="font-semibold">class:</span> XI RPL 2</p>
+                <p class="text-gray-700"><span class="font-semibold">Addres:</span> Jl. Bhakti Abri - Kel Sukamaju Baru, Kec Tapos, Bekasi</p>
+                <p class="text-gray-700"><span class="font-semibold">place and date of birth:</span> depok, 04 Juni 2008</p>
+                <p class="text-gray-700"><span class="font-semibold">religion:</span> Islam</p>
+                <p class="text-gray-700"><span class="font-semibold">gender:</span> Man</p>
+                <p class="text-gray-700"><span class="font-semibold">Origin of school:</span> SMK Taruna Bhakti</p>
             </div>
         </section>
 
 
         <section id="contact">
             <h1 class="text-2xl font-bold mb-4">Contact</h1>
-            <form action="#" class="space-y-6 max-w-md mx-auto bg-white p-6 rounded-lg shadow-md">
+            <form action="{{ route('contact.send') }}" method="POST" class="space-y-6 max-w-md mx-auto bg-white p-6 rounded-lg shadow-md">
+                @csrf
                 <div>
                     <label for="email" class="block mb-2 text-sm font-medium text-gray-700">Your Email</label>
-                    <input type="email" id="email" class="w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 p-2.5" placeholder="name@domain.com" required>
+                    <input type="email" name="email" id="email" class="w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 p-2.5" placeholder="name@domain.com" required>
                 </div>
                 <div>
-                    <label for="subject" class="block mb-2 text-sm font-medium text-gray-700">Subject</label>
-                    <input type="text" id="subject" class="w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 p-3" placeholder="How can we help you?" required>
+                    <label for="subject" class="block mb-2 text-sm font-medium text-gray-700">phone number</label>
+                    <input type="text" name="subject" id="subject" class="w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 p-3" placeholder="" required>
                 </div>
                 <div>
                     <label for="message" class="block mb-2 text-sm font-medium text-gray-700">Your Message</label>
-                    <textarea id="message" rows="4" class="w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 p-2.5" placeholder="Leave your message here..." required></textarea>
+                    <textarea name="message" id="message" rows="4" class="w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 p-2.5" placeholder="Leave your message here..." required></textarea>
                 </div>
                 <button type="submit" class="w-full bg-gray-600 text-white py-3 rounded-lg hover:bg-gray-700 focus:ring-4 focus:ring-gray-300 focus:outline-none">Send Message</button>
             </form>
+
         </section>
     </div>
+    @if(session('success'))
+    <div class="bg-blue-500 text-white p-4 rounded mb-4">
+        {{ session('success') }}
+    </div>
+@endif
 
 </body>
 
