@@ -24,8 +24,8 @@ Route::post('/submit-data', [HomeController::class, 'store'])->name('submit.data
 Route::post('/contact', [HomeController::class, 'send'])->name('contact.send');
 
 Route::get('/send-email', function () {
-    Mail::raw('Ini adalah email testing!', function ($message) {
-        $message->to('email_tujuan@example.com')
+    Mail::raw('Ini adalah email percobaan(testing ges)!', function ($message) {
+        $message->to('contoh_emaildoang@example.com')
                 ->subject('Testing Laravel Mail');
     });
 
