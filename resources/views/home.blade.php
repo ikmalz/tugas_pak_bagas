@@ -61,8 +61,8 @@
                     <input type="email" name="email" id="email" class="w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 p-2.5" placeholder="name@domain.com" required>
                 </div>
                 <div>
-                    <label for="subject" class="block mb-2 text-sm font-medium text-gray-700">phone number</label>
-                    <input type="text" name="subject" id="subject" class="w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 p-3" placeholder="" required>
+                    <label for="phone_number" class="block mb-2 text-sm font-medium text-gray-700">Phone Number</label>
+                    <input type="text" name="phone_number" id="phone_number" class="w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 p-3" placeholder="Enter your phone number" required>
                 </div>
                 <div>
                     <label for="message" class="block mb-2 text-sm font-medium text-gray-700">Your Message</label>
